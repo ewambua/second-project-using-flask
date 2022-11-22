@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="../static/bootstrap/js/jquery-3.4.0.js"></script>
+    <script src="../static/bootstrap/js/popper.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <h1 class="text-success text-center">Register</h1>
+    <a href="/"><button class="btn btn-outline-info">Home</button></a>
+    <a href="/about"><button class="btn btn-outline-success">About</button></a>
+    <a href="/gallery"><button class="btn btn-outline-warning">Gallery</button></a>
+    <a href="/register"><button class="btn btn-outline-danger active">Register</button></a>
+    <hr>
+    <form method="post" action="">
+        <input placeholder="Enter name" name="jina" type="text"><br><br>
+        <input placeholder="Enter email" name="arafa" type="email"><br><br>
+        <input placeholder="Enter password" name="siri" type="password"><br><br>
+        <input value="Register" type="submit"><br><br>
+    </form>
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+
+</body>
+</html>
